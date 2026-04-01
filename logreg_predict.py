@@ -6,8 +6,6 @@ from sklearn.metrics import accuracy_score
 from logistic_regression import LogisticRegression as lr
 
 
-PRED = ["Astronomy","Herbology"]
-
 class Dataset:
 
     def __init__(self, file_path : str):

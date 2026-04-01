@@ -24,7 +24,7 @@ class Dataset:
             axes[i//5,i%5].set_title(f"{course}")
             i+=1
         plt.tight_layout()
-        plt.savefig("pair")
+        plt.savefig("hist")
         plt.show()
 
 
