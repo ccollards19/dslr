@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-import csv
-import time 
 import argparse 
 import pandas as pd
 import matplotlib.pyplot as plt
