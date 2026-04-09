@@ -39,8 +39,8 @@ def main():
             # print(args.weights.df)
             model = lr(weights=args.weights.df)
             ret = model.predict(args.input.num_df)
-            ret.index.name = "student"
-            ret.name = "House Prediction"
+            ret.index.name = "Index"
+            ret.name = "Hogwarts House"
             # print(ret)
             # print(f"Accuracy: {accuracy_score(args.input.df['Hogwarts House'], ret)}")
             ret.to_csv("houses.csv")
