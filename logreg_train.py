@@ -22,14 +22,17 @@ class Dataset:
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('input', type=Dataset, help='input file')
-    args = parser.parse_args()
-    if args.input:
-        model = lr()
-        weights = model.train(args.input.num_df, args.input.df["Hogwarts House"], EPOCHS, LRATES)
-        print(f"===Loss===\n{model.loss}\n===Weights===\n{weights}")
-        weights.to_csv("weights.csv")
+    try:
+        parser = argparse.ArgumentParser()
+        parser.add_argument('input', type=Dataset, help='input file')
+        args = parser.parse_args()
+        if args.input:
+            model = lr()
+            weights = model.train(args.input.num_df, args.input.df["Hogwarts House"], EPOCHS, LRATES)
+            print(f"===Loss===\n{model.loss}\n===Weights===\n{weights}")
+            weights.to_csv("weights.csv")
+    except Exception as e:
+        print(e)
 
 if __name__ == "__main__" :
     main()
